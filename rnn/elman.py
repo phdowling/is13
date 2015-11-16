@@ -139,12 +139,13 @@ class ElmanRNNModel(object):
         rnn = cls.__new__(cls)
 
         rnn.params = []
+        rnn.names = []
         for paramname, param in params.iteritems():
-            param = theano.shared(param)
-
+            rnn.names.append(paramname)
             if paramname == "embeddings":
                 paramname = "emb"
 
+            param = theano.shared(param)
             setattr(rnn, paramname, param)
             rnn.params.append(getattr(rnn, paramname))
 
