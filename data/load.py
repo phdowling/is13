@@ -35,7 +35,7 @@ def load_dropbox(filename):
 def load_udem(filename):
     if not isfile(filename):
         download('http://lisaweb.iro.umontreal.ca/transfert/lisa/users/mesnilgr/atis/'+filename)
-    f = gzip.open(filename,'rb')
+    f = gzip.open(filename, 'rb')
     return f
 
 

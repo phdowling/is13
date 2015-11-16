@@ -7,7 +7,7 @@ import stat
 import subprocess
 from os.path import isfile, join
 from os import chmod
-from is13.data.load import download
+from data.load import download
 
 PREFIX = os.getenv('ATISDATA', '')
 
